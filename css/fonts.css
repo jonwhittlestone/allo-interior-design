@@ -1,0 +1,19 @@
+/* Baskerville Font */
+
+/* 
+ * We're using Libre Baskerville from Google Fonts
+ * This is a free, open-source version of Baskerville
+ */
+
+/* Import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* 
+ * For system Baskerville (if available)
+ * This will try to use the system's Baskerville font first,
+ * then fall back to Libre Baskerville from Google Fonts,
+ * and finally to a generic serif font
+ */
+.baskerville-font {
+  font-family: 'Baskerville', 'Libre Baskerville', serif;
+}
