@@ -1,0 +1,22 @@
+This folder contains placeholder images for the Allo Interiors website.
+
+The following images need to be extracted from the design files:
+
+1. allo-logo.png - The circular pink "allo" logo seen in the top left of the navigation bar
+2. allo-logo-dark.png - The dark circular "allo" logo seen in the contact page
+3. about-us.png - The image of the team members on the About Us page
+4. home-staging.png - The image on the Home Staging page
+5. contact-image.png - The image on the left side of the Contact page
+6. service-consultation.png - Image for the Consultation service
+7. service-moodboard.png - Image for the Moodboard service
+8. service-sourcing.png - Image for the Sourcing service
+9. service-project-management.png - Image for the Project Management service
+10. service-accessorising.png - Image for the Accessorising/Staging service
+11. service-help.png - Image for the Help service
+12. testimonial-icon-1.png - First client icon on the Testimonials page
+13. testimonial-icon-2.png - Second client icon on the Testimonials page
+14. testimonial-icon-3.png - Third client icon on the Testimonials page
+15. facebook-icon.png - Facebook icon for the Contact page
+16. instagram-icon.png - Instagram icon for the Contact page
+
+These images should be extracted from the design files and placed in this folder.
