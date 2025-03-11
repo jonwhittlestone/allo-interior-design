@@ -97,11 +97,12 @@ a:hover {
 .nav-container .container {
   display: flex;
   align-items: center;
+  padding-left: 0;
 }
 
 .logo {
   display: inline-block;
-  margin-left: 1rem;
+  margin-left: 0;
 }
 
 .logo svg {
@@ -117,7 +118,7 @@ a:hover {
 
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
 }
@@ -132,8 +133,8 @@ a:hover {
 }
 
 .nav-link {
-  color: var(--text-light);
-  font-size: 1.2rem;
+  color: var(--light-pink);
+  font-size: 1.5rem;
   text-transform: lowercase;
   font-style: italic;
 }
@@ -175,19 +176,19 @@ a:hover {
 
 .home-tagline {
   font-size: 2.5rem;
-  color: var(--burgundy);
+  color: var(--nav-gray);
   font-style: italic;
 }
 
 /* About Page */
 .about-content {
   background-color: var(--dark-gray);
-  color: var(--text-light);
+  color: var(--light-pink);
   padding: 2rem 0;
 }
 
 .about-title {
-  color: var(--text-light);
+  color: var(--light-pink);
   font-style: italic;
 }
 
@@ -257,11 +258,11 @@ a:hover {
 
 .staging-quote {
   background-color: var(--dark-gray);
-  border: 1px solid var(--light-pink);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 5px;
-  text-align: center;
+  text-align: right;
+  font-size:1.4em
 }
 
 .staging-grid {
@@ -283,6 +284,49 @@ a:hover {
 
 .staging-list li {
   margin-bottom: 0.5rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+  background-color: var(--light-pink);
+  padding: 3rem 0;
+}
+
+.gallery-title {
+  color: var(--burgundy);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  color: var(--burgundy);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Testimonials Page */
@@ -398,8 +442,45 @@ a:hover {
 /* Footer */
 .footer-bar {}
 
+/* Hamburger Menu */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
+  /* Typography responsive adjustments */
   h1 {
     font-size: 3.5rem;
   }
@@ -422,13 +503,57 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  /* Show hamburger button on mobile */
+  .hamburger-button {
+    display: block;
+  }
+  
+  /* Mobile navigation container */
+  .nav-container .container {
+    position: relative;
+    justify-content: space-between;
+  }
+  
+  /* Mobile navigation styles */
+  .nav.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--nav-gray);
+    z-index: 999;
+    transition: right 0.3s ease;
+    padding-top: 70px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Open state for mobile navigation */
+  .nav.mobile.open {
+    right: 0;
+  }
+  
   .nav-list {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 0;
   }
   
   .nav-item {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1.8rem;
+    text-align: center;
   }
   
   .home-title {

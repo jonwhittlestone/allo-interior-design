@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import GalleryItem from "@/components/GalleryItem";
 
 export default function HomeStagingPage() {
   // Read the markdown file
@@ -44,6 +45,22 @@ export default function HomeStagingPage() {
                 </ReactMarkdown>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="gallery-section">
+        <div className="container">
+          <h2 className="gallery-title">Our Recent Projects</h2>
+          <div className="gallery-grid">
+            <GalleryItem 
+              imageSrc="/images/gallery-1.png" 
+              altText="Ashley Road" 
+            />
+            <GalleryItem 
+              imageSrc="/images/gallery-2.png" 
+              altText="St. John's Road" 
+            />
           </div>
         </div>
       </div>
