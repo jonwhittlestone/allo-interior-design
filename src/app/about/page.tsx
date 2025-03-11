@@ -1,6 +1,15 @@
 import Image from "next/image";
+import fs from "fs";
+import path from "path";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
+// This is a server component, so we can read the file at build time
 export default function AboutPage() {
+  // Read the markdown file
+  const markdownPath = path.join(process.cwd(), "src/app/about/page.md");
+  const markdownContent = fs.readFileSync(markdownPath, "utf8");
+
   return (
     <main className="main-content">
       <div className="about-content">
@@ -10,41 +19,18 @@ export default function AboutPage() {
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}
           >
             <div className="about-text-container">
-              <h2 className="about-title">About Us ...</h2>
-
-              <p className="about-text">
-                We live in Surrey with our other halves, kids and dogs
-              </p>
-
-              <p className="about-text">
-                Family living doesn't mean compromising on style
-              </p>
-
-              <p className="about-text">
-                Home Staging for clients and estate agents<br />
-                Pub Décor & Styling<br />
-                Wreath making<br />
-                Friends mini projects
-              </p>
-
-              <p className="about-text">
-                I have been reading House & Garden since I was 6 years old,
-                planning renovations in home built camps and decorating since
-                the age of 11.
-              </p>
-
-              <p className="about-text">
-                Take part in various creative; upcycling furniture, making
-                pinboards, table decorations, I am currently project managing my
-                home renovation from concept to completion.
-              </p>
-
-              <p className="about-text">Have done various interior courses.</p>
-
-              <p className="about-text">
-                Steph specialises in textiles, upholstery, cushion an curtain
-                making.
-              </p>
+              <div className="markdown-content">
+                <ReactMarkdown 
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    // Map markdown elements to appropriate HTML elements with classes
+                    h2: ({...props}) => <h2 className="about-title" {...props} />,
+                    p: ({...props}) => <p className="about-text" {...props} />,
+                  }}
+                >
+                  {markdownContent}
+                </ReactMarkdown>
+              </div>
             </div>
 
             <div className="about-image-container">

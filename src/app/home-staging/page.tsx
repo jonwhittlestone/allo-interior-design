@@ -1,12 +1,18 @@
 import Image from "next/image";
+import fs from "fs";
+import path from "path";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function HomeStagingPage() {
+  // Read the markdown file
+  const markdownPath = path.join(process.cwd(), "src/app/home-staging/page.md");
+  const markdownContent = fs.readFileSync(markdownPath, "utf8");
+
   return (
     <main className="main-content">
       <div className="staging-content">
         <div className="container">
-          <h2 className="staging-title">Home Staging ...</h2>
-
           <div className="staging-grid">
             <div className="staging-left">
               <Image
@@ -23,91 +29,19 @@ export default function HomeStagingPage() {
                 <p>&ldquo;Setting the Stage for your Next Chapter&rdquo;</p>
               </div>
 
-              <div className="staging-why-us">
-                <h3>Why Choose Us?</h3>
-                <ul className="staging-list">
-                  <li>
-                    <strong>Local Expertise:</strong> Based in Dorking, we
-                    understand the preferences of local buyers and have personal
-                    experience of buying and selling homes in the local area.
-                  </li>
-                  <li>
-                    <strong>Highly approachable:</strong> We provide a relaxed
-                    and friendly approach to helping you sell your property
-                  </li>
-                  <li>
-                    <strong>Tailored Solutions:</strong>
-                    <ul>
-                      <li>
-                        Packages designed to meet your unique needs and budget.
-                      </li>
-                      <li>
-                        We draw attention to the properties best features whilst
-                        detracting from the worst.
-                      </li>
-                      <li>
-                        We can help potential buyers visualise themselves living
-                        in your property
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Proven Results:</strong>
-                    <ul>
-                      <li>
-                        Staged properties secure more viewings and offers,
-                        command higher asking prices and on average sell for
-                        more and quicker than non staged homes.
-                      </li>
-                      <li>
-                        100% of estate agents agreed that staged properties make
-                        it easier for potential buyers to visualise themselves
-                        living in the space.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="staging-services">
-                <h3>Our Services and Pricing</h3>
-                <p>
-                  <strong>Consultation-Only</strong> (Can include virtual
-                  consultation)
-                </p>
-                <p><strong>Price:</strong> £150 (flat fee)</p>
-
-                <p>Our professional consultation includes:</p>
-                <ul className="staging-list">
-                  <li>A comprehensive walkthrough of your home.</li>
-                  <li>
-                    Expert advice on decluttering, furniture placement, and
-                    styling.
-                  </li>
-                  <li>
-                    A verbal, tailored action plan for you to implement,
-                    provided on the day.
-                  </li>
-                </ul>
-
-                <h3>Add-On Options:</h3>
-                <ul className="staging-list">
-                  <li><strong>Written Action Plan:</strong> £50 plus</li>
-                  <li>
-                    <strong>Follow-Up Visit</strong> for further advice if
-                    needed: £75 per session.
-                  </li>
-                  <li>
-                    <strong>Implementation of Staging</strong> to include
-                    rearrangement of existing furniture for optimal layout: £300
-                    flat day rate or £40 per hour
-                  </li>
-                  <li>
-                    <strong>Accessories</strong> (e.g. rugs, cushions, artwork)
-                    to create an inviting look: £tbc project dependant.
-                  </li>
-                  <li><strong>Decluttering Services:</strong> £40 per hour.</li>
-                </ul>
+              <div className="markdown-content">
+                <ReactMarkdown 
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    // Map markdown elements to appropriate HTML elements with classes
+                    h2: ({...props}) => <h2 className="staging-title" {...props} />,
+                    h3: ({...props}) => <h3 className="staging-subtitle" {...props} />,
+                    ul: ({...props}) => <ul className="staging-list" {...props} />,
+                    p: ({...props}) => <p className="staging-text" {...props} />,
+                  }}
+                >
+                  {markdownContent}
+                </ReactMarkdown>
               </div>
             </div>
           </div>
