@@ -1,0 +1,485 @@
+/* Import Baskerville font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+/* CSS Variables for consistent colors */
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-pink: #F9DDD5; /* Light pink/peach background */
+  --burgundy: #8B0A3C; /* Deep burgundy/maroon */
+  --dark-gray: #3A3E47; /* Dark gray/slate background */
+  --nav-gray: #3A3E47; /* Navigation bar background */
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  
+  --background: var(--light-pink);
+  --foreground: var(--text-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-gray);
+    --foreground: var(--text-light);
+  }
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baskerville', 'Libre Baskerville', serif;
+  line-height: 1.6;
+  color: var(--foreground);
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baskerville', 'Libre Baskerville', serif;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: var(--burgundy);
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--burgundy);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header and Navigation */
+.header-bar {}
+
+.nav-container {
+  background-color: var(--nav-gray);
+  position: relative;
+}
+
+.nav-container .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.logo svg {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+.nav-link:hover {
+  color: var(--light-pink);
+}
+
+/* Main Content */
+.main-content {
+  min-height: calc(100vh - 140px); /* Adjust based on header and footer height */
+  /* padding: 2rem 0; */
+}
+
+/* Home Page */
+.home-content {
+  background-color: var(--light-pink);
+  padding: 4rem 0;
+  text-align: left;
+}
+
+.home-content .container {
+  margin-left: 2rem;
+}
+
+.home-title {
+  font-size: 10rem;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.home-subtitle {
+  font-size: 4rem;
+  color: var(--burgundy);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.home-tagline {
+  font-size: 2.5rem;
+  color: var(--burgundy);
+  font-style: italic;
+}
+
+/* About Page */
+.about-content {
+  background-color: var(--dark-gray);
+  color: var(--text-light);
+  padding: 2rem 0;
+}
+
+.about-title {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.about-text {
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Services Page */
+.services-content {
+  background-color: var(--burgundy);
+  color: var(--text-light);
+  padding: 2rem 0;
+}
+
+.services-title {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* Home Staging Page */
+.staging-content {
+  background-color: var(--dark-gray);
+  color: var(--light-pink);
+  padding: 2rem 0;
+}
+
+.staging-content h3 {
+  color: var(--light-pink);
+}
+
+.staging-title {
+  color: var(--light-pink);
+  font-style: italic;
+}
+
+.staging-quote {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--light-pink);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.staging-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.staging-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.staging-list {
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.staging-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials Page */
+.testimonials-content {
+  background-color: var(--light-pink);
+  padding: 2rem 0;
+}
+
+.testimonials-title {
+  color: var(--burgundy);
+  font-style: italic;
+}
+
+.testimonial-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.testimonial-icon {
+  width: 50%;
+  height: auto;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: var(--burgundy);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-author {
+  text-align: right;
+  margin-top: 1rem;
+  color: var(--burgundy);
+}
+
+/* Contact Page */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.contact-image {
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+.contact-info {
+  background-color: var(--burgundy);
+  color: var(--text-light);
+  padding: 3rem;
+  position: relative;
+}
+
+.contact-title {
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-section {
+  margin-bottom: 1.5rem;
+}
+
+.contact-section h3 {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.contact-section a {
+  color: var(--text-light);
+}
+
+.contact-section a:hover {
+  color: var(--light-pink);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-dark {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* Footer */
+.footer-bar {}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  .home-title {
+    font-size: 5rem;
+  }
+  
+  .home-subtitle {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .home-title {
+    font-size: 4rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .staging-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .home-title {
+    font-size: 3rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .home-tagline {
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+}
