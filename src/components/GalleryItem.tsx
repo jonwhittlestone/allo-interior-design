@@ -15,7 +15,6 @@ export default function GalleryItem({ imageSrc, altText }: GalleryItemProps) {
         height={300}
         className="gallery-image"
       />
-      <p className="gallery-caption">{altText}</p>
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function ContactPage() {
             <div className="contact-section">
               <h3>Socials:</h3>
               <div className="social-icons">
-                <a href="#" className="social-link">
+                <a href="https://www.facebook.com/profile.php?id=61574019571432" className="social-link">
                   <Image
                     src="/images/facebook-icon.png"
                     alt="Facebook"
@@ -50,7 +50,7 @@ export default function ContactPage() {
                     height={30}
                   />
                 </a>
-                <a href="#" className="social-link">
+                <a href="https://www.instagram.com/allointeriorsuk/" className="social-link">
                   <Image
                     src="/images/instagram-icon.png"
                     alt="Instagram"
@@ -63,14 +63,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="logo-dark">
-            <Image
-              src="/images/allo-logo-dark.png"
-              alt="Allo Interiors Logo"
-              width={80}
-              height={80}
-            />
-          </div>
         </div>
       </div>
     </main>
