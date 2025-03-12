@@ -18,8 +18,8 @@ export default function TestimonialsPage() {
               src="/images/testimonial-icons.png"
               alt="Client Icon"
               className="testimonial-icon"
-              width={400}
-              height={200}
+              width={600}
+              height={400}
             />
           </div>
 
