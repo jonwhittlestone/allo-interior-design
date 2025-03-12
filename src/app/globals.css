@@ -6,7 +6,7 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
-  --light-pink: #F9DDD5; /* Light pink/peach background */
+  --light-pink: #fad7cf; /* Light pink/peach background */
   --burgundy: #8B0A3C; /* Deep burgundy/maroon */
   --dark-gray: #3A3E47; /* Dark gray/slate background */
   --nav-gray: #3A3E47; /* Navigation bar background */
@@ -251,6 +251,11 @@ a:hover {
   color: var(--light-pink);
 }
 
+/* Hide staging subtitles containing "Hide" */
+h3.staging-subtitle:not(:empty):is("Hide") {
+  display: none !important;
+}
+
 .staging-title {
   color: var(--light-pink);
   font-style: italic;
@@ -284,6 +289,31 @@ a:hover {
 
 .staging-list li {
   margin-bottom: 0.5rem;
+}
+
+/* Two-column layout for markdown content */
+.markdown-content.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.markdown-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.markdown-column h3 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for two-column layout */
+@media (max-width: 768px) {
+  .markdown-content.two-columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 /* Gallery Section */
@@ -348,7 +378,7 @@ a:hover {
 }
 
 .testimonial-icon {
-  width: 50%;
+  /* width: 50%; */
   height: auto;
 }
 
@@ -584,6 +614,9 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .home-content .container {
+    margin-left:0px
+  }
   h1 {
     font-size: 2.5rem;
   }
@@ -606,5 +639,15 @@ a:hover {
   
   .container {
     padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 481px) {
+  /* Constrain hero image width to container max-width */
+  .home-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 0;
   }
 }

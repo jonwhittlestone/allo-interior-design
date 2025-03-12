@@ -11,11 +11,12 @@ export default function ServicesPage() {
             {/* Service 1 */}
             <div className="service-item">
               <Image
-                src="/images/services-consultation.png"
+                src="/images/service-consultation-bw.png"
                 alt="Consultation"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Consultation</h3>
             </div>
@@ -23,11 +24,12 @@ export default function ServicesPage() {
             {/* Service 2 */}
             <div className="service-item">
               <Image
-                src="/images/services-moodboard.png"
+                src="/images/service-moodboard-bw.png"
                 alt="Moodboard"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Moodboard</h3>
             </div>
@@ -35,11 +37,12 @@ export default function ServicesPage() {
             {/* Service 3 */}
             <div className="service-item">
               <Image
-                src="/images/services-sourcing.png"
+                src="/images/service-sourcing-bw.png"
                 alt="Sourcing"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Sourcing</h3>
             </div>
@@ -47,11 +50,12 @@ export default function ServicesPage() {
             {/* Service 4 */}
             <div className="service-item">
               <Image
-                src="/images/services-project-management.png"
+                src="/images/service-project-management-bw.png"
                 alt="Project Management"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Project Management</h3>
             </div>
@@ -59,11 +63,12 @@ export default function ServicesPage() {
             {/* Service 5 */}
             <div className="service-item">
               <Image
-                src="/images/services-accessorising-staging.png"
+                src="/images/service-accessorising-staging-bw.png"
                 alt="Accessorising / Staging"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Accessorising / Staging</h3>
             </div>
@@ -71,11 +76,12 @@ export default function ServicesPage() {
             {/* Service 6 */}
             <div className="service-item">
               <Image
-                src="/images/services-help.png"
+                src="/images/service-help-bw.png"
                 alt="Help"
                 className="service-image"
                 width={300}
                 height={200}
+                style={{ borderRadius: '8px', objectFit: 'cover' }}
               />
               <h3 className="service-title">Help?</h3>
             </div>

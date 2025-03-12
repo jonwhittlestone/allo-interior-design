@@ -1,33 +1,25 @@
 ## Home Staging ...
 
-### Why Choose Us?
+### &nbsp;
 
-- **Local Expertise:** Based in Dorking, we understand the preferences of local buyers and have personal experience of buying and selling homes in the local area.
-- **Highly approachable:** We provide a relaxed and friendly approach to helping you sell your property
-- **Tailored Solutions:**
-  - Packages designed to meet your unique needs and budget.
-  - We draw attention to the properties best features whilst detracting from the worst.
-  - We can help potential buyers visualise themselves living in your property
-- **Proven Results:**
-  - Staged properties secure more viewings and offers, command higher asking prices and on average sell for more and quicker than non staged homes.
-  - 100% of estate agents agreed that staged properties make it easier for potential buyers to visualise themselves living in the space.
+Our aim is to showcase the property's strengths, downplay its weaknesses, and help buyers envision themselves living there…
 
-### Our Services and Pricing
+Our Services:
 
-**Consultation-Only** (Can include virtual consultation)
+• Consultation  
+• Written Action Plan  
+• Follow-Up Visits  
+• Implementation of Staging  
+• Accessorising  
+• Decluttering
 
-**Price:** £150 (flat fee)
+### Why Choose Us
 
-Our professional consultation includes:
+Local Expertise, based in Dorking. We understand the preferences of local buyers and have personal experience of buying and selling homes in the local area.
 
-- A comprehensive walkthrough of your home.
-- Expert advice on decluttering, furniture placement, and styling.
-- A verbal, tailored action plan for you to implement, provided on the day.
+We provide a relaxed and friendly approach to helping you sell your property.
 
-### Add-On Options:
+Proven Results:
 
-- **Written Action Plan:** £50 plus
-- **Follow-Up Visit** for further advice if needed: £75 per session.
-- **Implementation of Staging** to include rearrangement of existing furniture for optimal layout: £300 flat day rate or £40 per hour
-- **Accessories** (e.g. rugs, cushions, artwork) to create an inviting look: £tbc project dependant.
-- **Decluttering Services:** £40 per hour.
+• Staged properties secure more viewings and offers, command higher asking prices and on average sell for more and quicker than non staged homes.  
+• 100% of estate agents agreed that staged properties make it easier for potential buyers to visualise themselves living in the space.
